@@ -1,8 +1,11 @@
 package com.codenjoy.dojo.tetris.client;
 
-import static com.codenjoy.dojo.services.Command.DOWN;
-import static com.codenjoy.dojo.services.Command.LEFT;
-import static com.codenjoy.dojo.services.Command.RIGHT;
+import com.codenjoy.dojo.client.AbstractJsonSolver;
+import com.codenjoy.dojo.client.MySolver;
+import com.codenjoy.dojo.client.WebSocketRunner;
+import com.codenjoy.dojo.services.Command;
+import com.codenjoy.dojo.services.CommandChain;
+import com.codenjoy.dojo.services.Dice;
 
 /*-
  * #%L
@@ -25,13 +28,6 @@ import static com.codenjoy.dojo.services.Command.RIGHT;
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
-
-import com.codenjoy.dojo.client.AbstractJsonSolver;
-import com.codenjoy.dojo.client.WebSocketRunner;
-import com.codenjoy.dojo.services.Command;
-import com.codenjoy.dojo.services.CommandChain;
-import com.codenjoy.dojo.services.Dice;
-import com.codenjoy.dojo.services.RandomDice;
 
 /**
  * User: your name
@@ -64,7 +60,7 @@ public class YourSolver extends AbstractJsonSolver<Board> {
         WebSocketRunner.runClient(
                 // скопируйте сюда адрес из браузера, на который перейдете после регистрации/логина
                 "http://localhost:8080/codenjoy-contest/board/player/ziwpjz46y4z5567k7uup?code=3867579515136108220&gameName=tetris",
-                new YourSolver(new RandomDice()),
+                new MySolver(),
                 new Board());
     }
 

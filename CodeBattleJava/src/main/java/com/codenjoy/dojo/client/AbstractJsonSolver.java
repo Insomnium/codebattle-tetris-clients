@@ -22,6 +22,8 @@ package com.codenjoy.dojo.client;
  * #L%
  */
 
+import org.jetbrains.annotations.NotNull;
+
 public abstract class AbstractJsonSolver<T extends AbstractTextBoard> implements Solver<AbstractTextBoard> {
 
     private AbstractTextBoard board;
@@ -29,7 +31,7 @@ public abstract class AbstractJsonSolver<T extends AbstractTextBoard> implements
     public abstract String getAnswer(T board);
 
     @Override
-    public String get(AbstractTextBoard board) {
+    public String get(@NotNull AbstractTextBoard board) {
         this.board = board;
         if (board.isGameOver()) return "";
 

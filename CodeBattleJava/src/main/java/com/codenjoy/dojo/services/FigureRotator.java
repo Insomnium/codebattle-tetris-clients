@@ -6,7 +6,6 @@ import java.util.function.BiFunction;
 
 import com.codenjoy.dojo.tetris.model.Elements;
 
-import lombok.var;
 
 public class FigureRotator {
 
